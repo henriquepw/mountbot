@@ -8,13 +8,15 @@
   "private": true,
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   },
   "lint-staged": {
     "src/**/*": [
       "eslint --fix",
-      "yarn test --findRelatedTests"
+      "yarn test --findRelatedTests",
+      "git add"
     ]
   },
   "scripts": {
@@ -28,11 +30,19 @@
   },
   "devDependencies": {
     "@shared/eslint-config": "*",
-
+    "commitizen": "^4.2.1",
     "cross-env": "^7.0.2",
     "cz-customizable": "^6.2.1",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "typescript": "^3.9.7"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "config/path/to/my/config.js"
+    }
   }
 }
