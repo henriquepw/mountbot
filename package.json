@@ -1,0 +1,38 @@
+{
+  "name": "chatbot-gama",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/henry-ns/chatbot-gama.git",
+  "author": "Henrique Miranda <enrque.ns@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "eslint --fix",
+      "yarn test --findRelatedTests"
+    ]
+  },
+  "scripts": {
+    "commit": "./node_modules/cz-customizable/standalone.js"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "packages/shared/*"
+    ]
+  },
+  "devDependencies": {
+    "@shared/eslint-config": "*",
+
+    "cross-env": "^7.0.2",
+    "cz-customizable": "^6.2.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "typescript": "^3.9.7"
+  }
+}
