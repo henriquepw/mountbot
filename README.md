@@ -61,7 +61,7 @@
 > under construction...
 
 ## :clipboard: Description
-Describe your application and what you learning with it. 😃
+O ChatBot-DT é uma solução simples que permite usuários interagirem com um sistema de listagem de produtos através de uma conversa onde o usuário informa produtos e informações. Então a partir disso ele recebe uma listagem de produtos relacionados a sua busca e decide quais ele deseja selecionar para fechar a compra.
 
 ## :rocket: Getting Started
 
