@@ -1,5 +1,5 @@
 {
-  "name": "chatbot-gama",
+  "name": "mountbot",
   "version": "0.1.0",
   "main": "index.js",
   "repository": "https://github.com/henry-ns/chatbot-gama.git",
@@ -13,14 +13,17 @@
     }
   },
   "lint-staged": {
-    "src/**/*": [
+    "packages/**/src/**/*": [
       "eslint --fix",
-      "yarn test --findRelatedTests",
-      "git add"
+      "yarn test --findRelatedTests"
     ]
   },
   "scripts": {
-    "commit": "./node_modules/cz-customizable/standalone.js"
+    "commit": "./node_modules/cz-customizable/standalone.js",
+
+    "@front:start": "yarn workspace @mountbot/frontend start",
+    "@front:build": "yarn workspace @mountbot/frontend build",
+    "@front:test": "yarn workspace @mountbot/frontend test"
   },
   "workspaces": {
     "packages": [
@@ -35,7 +38,7 @@
     "cz-customizable": "^6.2.1",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
-    "typescript": "^3.9.7"
+    "eslint-plugin-import-helpers": "^1.0.2"
   },
   "config": {
     "commitizen": {
