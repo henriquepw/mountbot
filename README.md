@@ -1,14 +1,14 @@
 <p align="center">
-  <img alt="Your icon here" src="./src/assets/icon.png" width="100"/>
+  <img alt="Your icon here" src="./packages/frontend/assets/icon.png" width="100"/>
 </p>
 <h1 align="center">
-  Your cool project
+  MountBot
 </h1>
 
 <!-- Badges -->
 <p align="center">
   <!-- if your  -->
-  <a href="https://github.com/<your-login>/<repository>/graphs/commit-activity" alt="Maintenance">
+  <a href="https://github.com/henry-ns/mountbot/graphs/commit-activity" alt="Maintenance">
     <img src="https://img.shields.io/badge/Maintained%3F-yes-1EAE72.svg" />
   </a>
 
@@ -23,8 +23,8 @@
   </a>
 
   <!-- codefactor -->
-  <a href="https://www.codefactor.io/repository/github/<your-login>/<repository>" alt="CodeFactor">
-    <img src="https://www.codefactor.io/repository/github/<your-login>/<repository>/badge" />
+  <a href="https://www.codefactor.io/repository/github/henry-ns/mountbot" alt="CodeFactor">
+    <img src="https://www.codefactor.io/repository/github/henry-ns/mountbot/badge" />
   </a>
 
   <!-- if your app is a website deployed on Netlify -->
@@ -34,17 +34,17 @@
 
   <br/>
 
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/<your-login>/<repository>?color=blue">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/henry-ns/mountbot?color=blue">
 
   <!-- version -->
-  <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/<your-login>/<repository>">
+  <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/henry-ns/mountbot">
 
   <!-- GitHub repo size -->
-  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/<your-login>/<repository>">
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/henry-ns/mountbot">
 
   <!-- Social -->  
-  <a href="https://github.com/<your-login>/<repository>/stargazers">
-    <img alt="GitHub stars" src="https://img.shields.io/github/stars/<your-login>/<repository>?style=social">
+  <a href="https://github.com/henry-ns/mountbot/stargazers">
+    <img alt="GitHub stars" src="https://img.shields.io/github/stars/henry-ns/mountbot?style=social">
   </a>
 
   <!-- more badges here -> https://gist.github.com/tterb/982ae14a9307b80117dbf49f624ce0e8 -->
@@ -61,7 +61,7 @@
 > under construction...
 
 ## :clipboard: Description
-O ChatBot-DT é uma solução simples que permite usuários interagirem com um sistema de listagem de produtos através de uma conversa onde o usuário informa produtos e informações. Então a partir disso ele recebe uma listagem de produtos relacionados a sua busca e decide quais ele deseja selecionar para fechar a compra.
+O MountBot é uma solução simples que permite usuários interagirem com um sistema de listagem de produtos através de uma conversa onde o usuário informa produtos e informações. Então a partir disso ele recebe uma listagem de produtos relacionados a sua busca e decide quais ele deseja selecionar para fechar a compra.
 
 ## :rocket: Getting Started
 
@@ -69,11 +69,11 @@ O ChatBot-DT é uma solução simples que permite usuários interagirem com um s
 
   - Using Git
 ```shell
-  git clone https://github.com/<your-login>/<repository>.git
+  git clone https://github.com/henry-ns/mountbot.git
 ```
   - Using Github CLI
 ```shell
-  gh repo clone <your-login>/<repository>
+  gh repo clone henry-ns/mountbot
 ```
   > :bulb: or whichever way you prefer
 
