@@ -1,9 +1,9 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import FloatChat from '../components/FloatChat';
 
 function WithFloat() {
-  return <h1>With floating</h1>;
+  return <FloatChat />;
 }
 
 export default WithFloat;

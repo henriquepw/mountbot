@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Your icon here" src="./packages/frontend/assets/icon.png" width="100"/>
+  <img alt="Your icon here" src="./packages/frontend/src/assets/icon.png" width="100"/>
 </p>
 <h1 align="center">
   MountBot
