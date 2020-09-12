@@ -55,12 +55,48 @@ li {
   position: relative;
 
   height: 100vh;
+  background: var(--color-charcoal);
 }
+
 .app header {
   position: absolute;
 
   top: 32px;
   right: 32px;
+}
+
+.app header a {
+  display: block;
+  font-size: 1.8rem;
+  letter-spacing: 0.05em;
+  color: var(--color-lighter);
+  position: relative;
+
+  padding:  0 2px 6px ;
+  overflow: hidden;
+  transition: color 0.2s;
+}
+
+.app header a:hover {
+  color: var(--color-burnt-sianna);
+}
+
+.app header a::after {
+  content: '';
+  position: absolute;
+
+  height: 2px;
+  width: 100%;
+
+  left: 0;
+  bottom: 0;
+  transform: translateY(100%) translateZ(0);
+  transition: transform 0.2s;
+  background: var(--color-burnt-sianna);
+}
+
+.app header a:hover::after {
+  transform: translateY(0) translateZ(0);
 }
 
 .app div {
