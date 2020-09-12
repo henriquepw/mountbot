@@ -1,24 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Amplify from 'aws-amplify';
 import { ChatBot, AmplifyTheme } from 'aws-amplify-react';
 
 import awsconfig from './aws-exports';
+import './styles.css';
 
 Amplify.configure(awsconfig);
 
-// Imported default theme can be customized by overloading attributes
 const myTheme = {
   ...AmplifyTheme,
   sectionHeader: {
     ...AmplifyTheme.sectionHeader,
-    backgroundColor: '#ff6600',
+    backgroundColor: '#F4A261',
   },
 };
 
 function App() {
-  function handleComplete(err, confirmation) {
-    if (err) {
+  function handleComplete(error, confirmation) {
+    if (error) {
       alert('Bot conversation failed');
       return null;
     }
@@ -28,20 +28,26 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1 className="App-title">Welcome to Chatbot&apos;s Dream-Team!</h1>
+    <main className="app">
+      <header className="app-header">
+        <a
+          href="https://github.com/henry-ns/chatbot-gama"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          About
+        </a>
       </header>
       <ChatBot
-        title="My Bot"
+        title="MountBot"
         theme={myTheme}
         botName="BookTrip_dev"
-        welcomeMessage="Hello, what can i help?"
+        welcomeMessage="Hello :), what can i help?"
         onComplete={handleComplete}
         clearOnComplete
         conversationModeOn={false}
       />
-    </div>
+    </main>
   );
 }
 

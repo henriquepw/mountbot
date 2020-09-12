@@ -28,6 +28,7 @@ module.exports = {
     'class-methods-use-this': 'off',
     'no-useless-constructor': 'off',
     'no-unused-expressions': 'off',
+    'no-console': 'off',
 
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',

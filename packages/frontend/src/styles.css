@@ -1,0 +1,68 @@
+:root {
+  --color-charcoal: #264653;
+  --color-persian-green: #2A9D8F;
+  --color-oregen-crayola: #E9C46A;
+  --color-sandy-brown : #F4A261;
+  --color-burnt-sianna: #E76F51;
+  --color-lighter: #FBFBFB;
+  --color-darker: #121212;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  background-color: var(--color-burnt-sianna);
+  color: var(--color-lighter);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+html, body {
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body, input, button, a {
+  font-family: 'Roboto', sans-serif;
+  color: var(--color-darker);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+
+  height: 100vh;
+}
+.app header {
+  position: absolute;
+
+  top: 32px;
+  right: 32px;
+}
+
+.app div {
+  flex: 1;
+}
