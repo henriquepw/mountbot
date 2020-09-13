@@ -5,7 +5,7 @@ interface ChatProps { }
 const Chat: StorefrontFunctionComponent<ChatProps> = ({ }) => {
   return (
   <>
-    <iframe src="https://d245xyuc29imlb.cloudfront.net/index.html" width="500px" height="500px"></iframe>
+    <iframe src="https://d2vcceer20pg9.cloudfront.net/index.html" width="500px" height="500px"></iframe>
   </>
   )
 }
