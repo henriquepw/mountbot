@@ -1,7 +1,7 @@
 {
-  "name": "chat",
+  "name": "@mounthbot/chat-block",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "lint": "eslint --ext js,jsx,ts,tsx .",
     "format": "prettier --write \"**/*.{ts,js,json}\""
