@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "importType": "LEX",
+    "importFormat": "JSON"
+  },
+  "resource": {
+    "name": "DreamTeam",
+    "version": "2",
+    "intents": [
+      {
+        "name": "BuySeparateProducts",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "Buy"
+        ],
+        "slots": [
+          {
+            "sampleUtterances": [],
+            "slotType": "NamesProductsBot",
+            "slotTypeVersion": "1",
+            "obfuscationSetting": "NONE",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "Which product do you want?"
+                }
+              ],
+              "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\",\"genericAttachments\":[{\"imageUrl\":\"https://raw.githubusercontent.com/henry-ns/chatbot-gama/master/packages/frontend/src/assets/icon.png?token=AK5TAVWWQAIHUFJCVYSC3PS7M2NGM\",\"subTitle\":\"Bot\",\"title\":\"Dream Team \",\"buttons\":[{\"text\":\"Mouse\",\"value\":\"mouse\"},{\"text\":\"Keyboard\",\"value\":\"keyboard\"},{\"text\":\"RAM Memory\",\"value\":\"RAM\"},{\"text\":\"CPU+Motherboard\",\"value\":\"CPUMotherboard\"},{\"text\":\"SSD\",\"value\":\"SSD\"}]},{\"imageUrl\":\"https://raw.githubusercontent.com/henry-ns/chatbot-gama/master/packages/frontend/src/assets/icon.png?token=AK5TAVWWQAIHUFJCVYSC3PS7M2NGM\",\"subTitle\":\"Bot\",\"title\":\"Dream Team\",\"buttons\":[{\"text\":\"Monitor\",\"value\":\"monitor\"},{\"text\":\"Source\",\"value\":\"source\"},{\"text\":\"Cabinet\",\"value\":\"cabinet\"},{\"text\":\"GPU\",\"value\":\"GPU\"}]}]}",
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "name": "Product"
+          }
+        ]
+      },
+      {
+        "name": "Finally",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [],
+        "slots": []
+      }
+    ],
+    "slotTypes": [
+      {
+        "name": "NamesProductsBot",
+        "version": "1",
+        "enumerationValues": [
+          {
+            "value": "keyboard"
+          },
+          {
+            "value": "CPUMotherboard"
+          },
+          {
+            "value": "SSD"
+          },
+          {
+            "value": "monitor"
+          },
+          {
+            "value": "source"
+          },
+          {
+            "value": "GPU"
+          },
+          {
+            "value": "cabinet"
+          },
+          {
+            "value": "RAM"
+          }
+        ],
+        "valueSelectionStrategy": "ORIGINAL_VALUE"
+      }
+    ],
+    "voiceId": "Joanna",
+    "childDirected": false,
+    "locale": "en-US",
+    "idleSessionTTLInSeconds": 120,
+    "clarificationPrompt": {
+      "messages": [
+        {
+          "contentType": "PlainText",
+          "content": "Sorry, can you please repeat that?"
+        }
+      ],
+      "maxAttempts": 5
+    },
+    "abortStatement": {
+      "messages": [
+        {
+          "contentType": "PlainText",
+          "content": "Sorry, I could not understand. Goodbye."
+        }
+      ]
+    },
+    "detectSentiment": false,
+    "enableModelImprovements": false
+  }
+}
