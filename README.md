@@ -11,9 +11,9 @@
 
 We build the core of our solution based on tools like AWS chatbots solution and VTEX integration APIs for online stores.
 
-## Wiki
-This whole project is very detailed in our Project Wiki. Please click [here](https://github.com/henry-ns/chatbot-gama/wiki) for more information
+## [Wiki](https://github.com/henry-ns/chatbot-gama/wiki)
+This whole project is very detailed in our Project Wiki. Please click [here](https://github.com/henry-ns/chatbot-gama/wiki) for more information.
 
-Build with 💙 By [DreamTeam](https://github.com/henry-ns/chatbot-gama/wiki/)
+Build with 💙 By [DreamTeam](https://github.com/henry-ns/chatbot-gama/wiki/).
 
 This project was created for the ChatBot challenge of Hiring Coders. A program made by VTEX in partnership with Gamma Academy.
