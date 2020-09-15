@@ -12,15 +12,13 @@ const myTheme = {
 
 function Chat({ onComplete }) {
   return (
-    <ChatBot
-      title="MountBot"
-      theme={myTheme}
-      botName="BookTrip_dev"
-      welcomeMessage="Hello :), what can i help?"
-      onComplete={onComplete}
-      clearOnComplete
-      conversationModeOn={false}
-    />
+    <>
+      <iframe
+        src="https://d1ynr93g6z78ed.cloudfront.net/index.html"
+        width="500px"
+        height="500px"
+      ></iframe>
+    </>
   );
 }
 
