@@ -8,14 +8,12 @@
   "private": true,
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
     "packages/**/src/**/*": [
-      "eslint --fix",
-      "yarn test --findRelatedTests"
+      "eslint --fix"
     ]
   },
   "scripts": {
@@ -38,7 +36,18 @@
     "cz-customizable": "^6.2.1",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
-    "eslint-plugin-import-helpers": "^1.0.2"
+
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-import-helpers": "^1.0.2",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "prettier": "^2.0.5"
   },
   "config": {
     "commitizen": {

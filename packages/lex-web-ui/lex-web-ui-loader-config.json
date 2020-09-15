@@ -1,0 +1,50 @@
+{
+  "region": "us-east-1",
+  "cognito": {
+    "poolId": "us-east-1:2a445c68-bd2b-4f3d-a1e1-4e6f6025cb08",
+    "appUserPoolClientId": "7nggol8ichocijqhdefjh1173b",
+    "appUserPoolName": "us-east-1_omjeVChBt",
+    "appDomainName": "lexkwebkuikidentitypoolconfigkmjnmkcreragi810472012112.auth.us-east-1.amazoncognito.com",
+    "aws_cognito_region": "us-east-1",
+    "region": "us-east-1",
+    "appUserPoolIdentityProvider": ""
+  },
+  "lex": {
+    "botName": "DreamTeam",
+    "botAlias": "$LATEST",
+    "initialText": "Hello, how can I help you?",
+    "initialSpeechInstruction": "Say 'Hello' to get started.",
+    "reInitSessionAttributesOnRestart": false,
+    "region": "us-east-1"
+  },
+  "ui": {
+    "parentOrigin": "https://d2vcceer20pg9.cloudfront.net",
+    "toolbarTitle": "Dream Team",
+    "toolbarLogo": "",
+    "positiveFeedbackIntent": "Thumbs up",
+    "negativeFeedbackIntent": "Thumbs down",
+    "helpIntent": "Help",
+    "minButtonToolTipContent": "Open Chatbot",
+    "enableLogin": false,
+    "AllowSuperDangerousHTMLInMessage": true,
+    "shouldDisplayResponseCardTitle": false,
+    "hideInputFieldsForButtonResponse": false,
+    "pushInitialTextOnRestart": false,
+    "directFocusToBotInput": false,
+    "showDialogStateIcon": false,
+    "backButton": false,
+    "messageMenu": true,
+    "hideButtonMessageBubble": false
+  },
+  "polly": {
+    "voiceId": "Salli"
+  },
+  "recorder": {
+    "preset": "speech_recognition"
+  },
+  "iframe": {
+    "iframeOrigin": "https://d2vcceer20pg9.cloudfront.net",
+    "shouldLoadIframeMinimized": false,
+    "iframeSrcPath": "/index.html#/?lexWebUiEmbed=true"
+  }
+}
