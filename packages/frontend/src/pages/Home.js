@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Chat from '../components/Chat';
-
+import FloatChat from '../components/FloatChat'
 function Home() {
   function handleComplete(error, confirmation) {
     if (error) {
@@ -24,7 +24,8 @@ function Home() {
           About
         </a>
       </header>
-      <Chat onComplete={handleComplete} />
+      <FloatChat />
+    
     </main>
   );
 }

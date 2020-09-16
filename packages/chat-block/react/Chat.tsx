@@ -10,7 +10,7 @@ const Chat: StorefrontFunctionComponent<ChatProps> = ({ }) => {
   )
 }
 
-Chat.schema = {
+Chat.schema = { 
   title: 'editor.chat.title',
   description: 'editor.chat.description',
   type: 'object',
