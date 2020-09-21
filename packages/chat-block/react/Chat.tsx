@@ -5,7 +5,7 @@ interface ChatProps { }
 const Chat: StorefrontFunctionComponent<ChatProps> = () => {
   return (
     <div style={{
-      position: 'absolute',
+      position: 'fixed',
       right: '32px',
       bottom: '64px',
     }}>
@@ -14,7 +14,7 @@ const Chat: StorefrontFunctionComponent<ChatProps> = () => {
         width="400px" 
         height="500px" 
         style={{
-          borderColor: '#E76F51',
+          borderColor: 'coral',
           borderWidth: '2px',
         }}
       ></iframe>
