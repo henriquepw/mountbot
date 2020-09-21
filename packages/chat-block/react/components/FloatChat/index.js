@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-;
+
 
 import { ReactComponent as BotImg } from '../../assets/bot.svg';
 import './styles.css';
