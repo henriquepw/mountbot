@@ -4,15 +4,6 @@ Lexbot Lambda handler.
 from urllib.request import Request, urlopen
 import json
 
-def getUrlsProduct(response):
-    
-    string = ""
-    for product in response:
- 
-        string += str(product['link']) + "\n"
-        
-    return string
-    
 def search_product(product):
     
     request = Request('https://hiringcoders4.vtexcommercestable.com.br/api/catalog_system/pub/products/search/{}'.format(product))
@@ -20,27 +11,78 @@ def search_product(product):
     request.add_header('x-vtex-api-apptoken', '')
     response = json.loads(urlopen(request).read())
     
-    UrlsProducts = getUrlsProduct(response)
+    return response
+
+def get_sku_information(productID):
     
-    return  UrlsProducts
+    request = Request('https://hiringcoders4.vtexcommercestable.com.br/api/catalog_system/pvt/sku/stockkeepingunitbyid/{}'.format(productID))
+    request.add_header('x-vtex-api-appkey', '')
+    request.add_header('x-vtex-api-apptoken', '')
+    response = json.loads(urlopen(request).read())
+    
+    return response
+    
+def get_product_information(response):
+    
+    list_response = []
+    
+    for product in response:
+        
+        sku_information = get_sku_information(product["productId"])
+        response_json =  {
+                     "title":product["productName"],
+                     "subTitle":product["brand"],
+                     "imageUrl":sku_information["ImageUrl"],
+                     "attachmentLinkUrl":sku_information["ImageUrl"],
+                     "buttons":[ 
+                         {
+                            "text":"Ver",
+                            "value":product["link"]
+                         }
+                      ]
+                   }
+        
+        list_response.append(response_json)
+        
+    return list_response
 
-
+def get_profile(profile):
+    
+    if profile == "Gamer":
+        new_profile = "Notebook-Gamer"
+    
+    else:
+        new_profile = "Notebook"
+        
+    return new_profile
+    
 def lambda_handler(event, context):
     
-    nameProduct = event['currentIntent']['slots']['nameProduct']
+    profile = event['currentIntent']['slots']['Profile']
     
-    string = search_product(nameProduct)
+    new_profile = get_profile(profile)
     
-    response = {
+    response = search_product(new_profile)
+    
+    list_response = get_product_information(response)
+    
+    response =  {
         "dialogAction": {
             "type": "Close",
             "fulfillmentState": "Fulfilled",
-            
             "message": {
-                "contentType": "SSML",
-                "content": string
+              "contentType": "SSML",
+              "content": "Message to convey to the user. For example, Thanks, your pizza has been ordered."
             },
-        }
+           "responseCard": {
+              "version": 1,
+              "contentType": "application/vnd.amazonaws.card.generic",
+              "genericAttachments": list_response
+             }
+          }
     }
     
     return response
+    
+    
+    
