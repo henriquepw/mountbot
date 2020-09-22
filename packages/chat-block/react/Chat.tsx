@@ -1,32 +1,35 @@
-import React from 'react'
+import React, { useEffect } from "react";
 
-interface ChatProps { }
-
-const Chat: StorefrontFunctionComponent<ChatProps> = () => {
-  return (
-    <div style={{
-      position: 'fixed',
-      right: '32px',
-      bottom: '64px',
-    }}>
-      <iframe
-        src="https://d1ynr93g6z78ed.cloudfront.net/index.html" 
-        width="400px" 
-        height="500px" 
-        style={{
-          borderColor: 'coral',
-          borderWidth: '2px',
-        }}
-      ></iframe>
-    </div>
-  )
+declare global {
+  interface Window {
+    kommunicate: any;
+  }
 }
+interface ChatbotProps { }
+const Chatbot: StorefrontFunctionComponent<ChatbotProps> = ({ }) => {
+  useEffect(() => {
+    obtenhaConfig();
+  }, []);
 
-Chat.schema = { 
-  title: 'editor.chat.title',
-  description: 'editor.chat.description',
-  type: 'object',
+  function obtenhaConfig() {
+    (function (_, m) {
+      var kommunicateSettings =
+        { "appId": "367b216fafeb96f45e0ccb589d128adef", "popupWidget": true, "automaticChatOpenOnNavigation": true };
+      var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+      s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+      var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+      window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+  }
+
+  return <div></div>;
+};
+
+Chatbot.schema = {
+  title: "editor.chatbot.title",
+  description: "editor.chatbot.description",
+  type: "object",
   properties: {},
-}
+};
 
-export default Chat
+export default Chatbot;
