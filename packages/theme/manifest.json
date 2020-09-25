@@ -1,7 +1,7 @@
 {
   "vendor": "hiringcoders4",
   "name": "dream-theme",
-  "version": "3.38.3",
+  "version": "3.38.4",
   "builders": {
     "styles": "2.x",
     "store": "0.x",
